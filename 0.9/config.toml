@@ -107,7 +107,7 @@ reporting-disabled = false
 [http]
   enabled = true
   bind-address = ":8086"
-  auth-enabled = false
+  auth-enabled = true
   log-enabled = true
   write-tracing = false
   pprof-enabled = false
@@ -152,11 +152,11 @@ reporting-disabled = false
 ### Controls the listener for collectd data.
 ###
 [collectd]
-  enabled = false
-  # bind-address = ":25826"
-  # database = "collectd"
-  # retention-policy = ""
-  # typesdb = "/usr/share/collectd/types.db"
+  enabled = true
+  bind-address = ":25826"
+  database = "collectd"
+  retention-policy = ""
+  typesdb = "/usr/share/collectd/types.db"
 
   # These next lines control how batching works. You should have this enabled
   # otherwise you could get dropped metrics or poor performance. Batching
